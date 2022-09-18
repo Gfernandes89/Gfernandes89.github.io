@@ -1,1 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+:root{
+    --bg_navbar: #333;
+    --c_font_light: #f2f2f2;
+    --c_hover: #555;
+    --c_bar: #ffffff;
+    --c_content: rgb(99, 99, 99);
+    --c_hover_cont: rgb(121, 121, 121);
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: aqua;
+    color: rgb(12, 12, 12);
+}
+
+p{
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5rem; /*Design responsivo - altura da lima rem e em -> 18 * 1.5 = 27px */
+  }
+  
+  .p1{
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.5rem; /*Design responsivo - altura da lima rem e em -> 18 * 1.5 = 27px */
+  }
+  
+  h2{
+    text-align: center;
+    line-height: 1.5rem; /*Design responsivo - altura da lima rem e em -> 18 * 1.5 = 27px */
+  }
+  
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg_navbar);
+    color: var(--c_font_light);
+}
+
+.navbar_titulo{
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+
+.navbar_link ul{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+.navbar_link li{
+    list-style-type: none;
+}
+
+.navbar_link a{
+    text-decoration: none;
+    color: var(--c_font_light);
+    padding: 1rem;
+    display: block;
+}
+
+.navbar_link a:hover{
+    transition: 0.5s;
+    background-color: var(--c_hover);
+}
+
+.navbar_button{
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.navbar_button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: var(--c_bar);
+    border-radius: 10px;
+    transition: 0.6s;
+}
+
+/* Estilo da opção dropdown */
+.dropdown .drop_button{
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background: inherit;
+    color: inherit;
+    padding: 1rem;
+    font-family: inherit;
+    margin: 0px;
+}
+
+.dropdown:hover .drop_button{
+    background-color: var(--c_hover);
+    cursor: pointer;
+}
+
+.drop_content{
+    display: none;
+    position: absolute;
+    background-color: var(--c_content);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.drop_content a{
+    color: var(--c_font_light);
+}
+
+.drop_content a:hover{
+    background-color: var(--c_hover_cont);
+    transition: 0.6s;
+}
+
+.dropdown:hover .drop_content{
+    display: block;
+}
+
+.row {
+    display: ;
+    flex-wrap: wrap;
+  
+  }
+  
+  /* 
+  Crie quatro colunas iguais */
+  .column {
+    
+    padding: 20px;
+    font-size: 2rem ;
+    line-height: 2rem;
+  }
+
+/* Container para flexboxes */
+.linha {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* 
+  Crie quatro colunas iguais */
+  .coluna {
+    padding: 20px;
+  }  
+
+  .content{
+    float:left; /*flutua o campo*/
+    width:100%;
+    margin-right:-210px;
+    background:rgb(136, 122, 136);
+  }
+  .content-inner{
+    margin-right:210px;
+  }
+  .sidebar{
+    background:rgb(120, 124, 136);
+    float:right; /*flutua o campo*/
+    width:200px;
+  } 
+
+
+@media (max-width: 500px){
+    .navbar_button{
+        display: flex;
+    }
+
+    .navbar_link{
+        display: none;
+        width: 100%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar_link ul{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar_link li{
+        text-align: center;
+    }
+
+    .navbar_link li a{
+        padding: 1rem 1rem;
+    }
+
+    .navbar_link.active{
+        display: flex;
+    }
+
+    /* Estilo das opções dropdown na tela de celular */
+
+    .navbar_link.active .drop_content{
+        position: relative;
+    }
+
+    .navbar_link.active .dropdown .drop_button{
+        width: 100%;
+    }
+
+    /* Animação do botão do menu responsivo */
+
+    #top, #bottom{
+        transform-origin: left;
+    }
+
+    .navbar.active .navbar_button #top{
+        transform: rotate(38deg);
+        transition: 0.6s;
+    }
+
+    .navbar.active .navbar_button #center{
+        opacity: 0;
+        transition: 0.6s;
+    }
+
+    .navbar.active .navbar_button #bottom{
+        transform: rotate(-38deg);
+        transition: 0.6s;
+    }
+
+    .row {
+        flex-direction: column;
+        
+      }
+    
+    
+    
+    .box img{
+      width: 100%;
+     
+    }
+    
+    .box{
+        width:200px;
+        padding: 10px;
+        margin:left;
+        border: 1px  solid  black;
+        background-color: rgb(136, 122, 136);
+    }
+    
+}
